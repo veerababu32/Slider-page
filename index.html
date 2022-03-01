@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Images slider</h1>
+        <img src="images/audi.jpg" alt="audi" id="image" width="400px">
+        <script>
+            var image = document.getElementById('image');
+            var imagesArray = ["images/bike.jpg", "images/lamborghani.jpg", "images/mercades.jpg", "images/nature.jpg", "images/audi.jpg"];
+            var i = 0;
+            function slider(){
+                image.src = imagesArray[i];
+                i++;
+                if (i>=imagesArray.length){
+                    i = 0;
+                }
+            }
+            interval = setInterval(slider, 3000);
+        </script>
+    </body>
+</html>
